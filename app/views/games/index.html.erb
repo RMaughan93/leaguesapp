@@ -1,0 +1,30 @@
+<h1> NOPE </h1>
+
+<table>
+<thead>
+    <th> Games </th>
+    <th> Player1 </th>
+    <th> Player2 </th>
+    <th> Actions </th>
+</thead>
+<tbody>
+  <% @game.each do |game| %>
+        <tr>
+        <td><%= game.id %></td>
+        <td><%= game.playerone %></td>
+        <td><%= game.playetwo %></td>
+        <td>
+            <%= link_to "View", '#' %>
+            <%= link_to "Edit", '#' %>
+            <%= link_to "Delete", '#' %>
+        </td>
+        </tr>
+        <% end %>
+</tbody>
+</table>
+<br/>
+
+<%= link_to "<< back to #{@league}", leagues_path %>
+<br/>
+
+<%= link_to "<< back to dashboard", root_path %>

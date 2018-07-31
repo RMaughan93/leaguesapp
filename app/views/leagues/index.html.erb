@@ -1,0 +1,27 @@
+<h1> Games </h1>
+
+<table>
+    <thead>
+        <th>League ID</th>
+        <th>Games</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        <% @league.each do |league| %>
+        <tr>
+        <td><%= league.id %></td>
+        <td><%= league.games.count %></td>
+        <td>
+            <%= link_to "View", '#' %>
+            <%= link_to "Edit", '#' %>
+            <%= link_to "Delete", '#' %>
+        </td>
+        </tr>
+        <% end %>
+    </tbody>
+    </table>
+<br/>
+<%= link_to "Create a new League", :action => :new %>
+<br/>
+
+<%= link_to "<< back to dashboard", root_path %>

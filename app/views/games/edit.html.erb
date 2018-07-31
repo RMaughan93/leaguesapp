@@ -1,0 +1,18 @@
+<h1> GAME ID </h1>
+
+
+<table>
+    <thead>
+        <th>Player 1 Name</th>
+        <th>Player 2 Name</th>
+    </thead>
+    <tbody>
+    <%= form_for @game do |f|%>
+        <td><%= f.text_field :playerone %></td>
+        <td><%= f.text_field :playertwo %></td>
+        <%= f.submit %>
+    <% end %>
+    </tbody>
+</table>
+
+<br/>

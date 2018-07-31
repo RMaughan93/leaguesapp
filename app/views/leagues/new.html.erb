@@ -1,0 +1,13 @@
+<h1> New League </h1>
+
+<%= form_for @league do |f| %>
+<h4>League Name </h4>
+<%= f.text_field :name %>
+
+<%= f.submit 'Save' %>
+<% end %>
+<br/>
+
+<%= link_to "<< Back to Leagues", leagues_path %>
+<br/>
+<%= link_to "<< Back to Dashboard", root_path %>

@@ -1,0 +1,32 @@
+<h1>LEAGUE ID</h1>
+<% @game = Game.all %>
+<table>
+<thead>
+    <th> Games </th>
+    <th> Player1 </th>
+    <th> Player2 </th>
+    <th> Actions </th>
+</thead>
+<tbody>
+  <% @game.each do |game| %>
+        <tr>
+        <td><%= game.id %></td>
+        <td><%= game.playerone %></td>
+        <td><%= game.playertwo %></td>
+        <td>
+            <%= link_to "View", '#' %>
+            <%= link_to "Edit", edit_game_path %>
+            <%= link_to "Delete", '#' %>
+        </td>
+        </tr>
+        <% end %>
+</tbody>
+</table>
+<br/>
+
+<%= link_to "Add a game",  new_game_path %>
+<br/>
+
+<%= link_to "<< Return to Leagues" , leagues_path %>
+<br/>
+<%= link_to "<< Return to Dashboard", root_path %>
